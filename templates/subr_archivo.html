@@ -1,0 +1,40 @@
+{% extends 'dashboard.html' %}
+{% block contenido %}
+<div class="card d-flex justify-content-center" style="width: 50%;  height: 120px; margin-left:15%; margin-top:5%;" >
+    <form method="post" enctype="multipart/form-data" action="/subir">
+        <div class="mb-3 row">
+            <label for="exampleFormControlInput1" class="form-label" >subri archivo</label>
+            <input type="file" id="file" name="file" multiple  />
+        </div>
+        <div>
+            <button class="btn btn-dark">Submit</button>
+        </div>
+    </form>
+</div>
+<div class="position_table" >
+    <table  id="myTable" class="display">
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>nombre</td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>
+                        {{ item.id }}
+                    </td>
+                    <td>
+                        {{ item.nombre }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </tr>
+          
+    </table>
+</div>
+
+
+{% endblock %}

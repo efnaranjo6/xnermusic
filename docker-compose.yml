@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  dbs:
+    image: postgres
+    volumes: 
+        - .:/xnermusic
+    ports: 
+        - 5432:5432    
+    env_file: .env
+  web:
+    build: '.'
+    volumes: 
+      - .:/xnermusic
+
+    ports:
+      - '5000:5000'

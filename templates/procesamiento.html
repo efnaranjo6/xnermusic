@@ -1,0 +1,62 @@
+{% extends 'dashboard.html' %}
+{% block contenido %}
+<h1>
+    marcando historia
+    </h1>
+    <div style="margin-top: 100px;">
+        <table id="myTable" class="display">
+            <thead>
+                <tr>
+                    <td>id</td>
+                    <td>nombre</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                <tr>
+                    <td>
+                        {{ item.id }}
+                    </td>
+                    <td>
+                        {{ item.nombre }}
+                    </td>
+                    <td>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="seleccionar('{{ item.id }}')">acciones</button>
+        
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            </tr>
+        </table>
+    </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/procesamiento" method="post">
+                    <input type="hidden" name="id_pista" id="id_pista" value="">
+                    <select name="tipo_procesamiento" id="" >
+                        <option value="1">selccionar</option>
+                        <option value="1">separar voz-pista</option>
+                    </select>
+                    <button class="btn btn-dark">Submit</button>
+                </form>
+            </div>
+        
+        </div>
+    </div>
+</div>
+<script>
+ function seleccionar(id){
+  //console.log(id)
+  data=document.getElementById("id_pista")
+  data.value=id
+ }
+</script>
+{% endblock %}

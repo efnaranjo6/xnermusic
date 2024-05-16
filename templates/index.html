@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" />
+</head>
+
+<body>
+    <div class="musho-dark-themed-edm-music">
+        <div class="typesimple">
+            <div class="brand">
+                <img class="icon" alt="" src="./public/icon.svg" />
+
+                <div class="brandname">Xnermusic</div>
+            </div>
+  
+       
+            <div class="nav-links">
+                <form action="{{ url_for('login') }}" method="post">
+
+          
+                <div class="nav-link">
+                    <div class="nav-label">Inicio</div>
+                </div>
+                <div class="nav-link">
+                    <div class="nav-label">Sobre Nosotros</div>
+                </div>
+                <div class="nav-link">
+                    <div class="nav-label">Equipo</div>
+                </div>
+                <div class="button">
+                    <div class="text-container">
+                        <a  href="{{ url_for('login') }}" class="nav-label">Entrar</a>
+                      
+                    </div>
+                </div>
+                </form>
+                <div class="button1">
+                    <div class="text-container">
+                        <div class="nav-label">Registro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="typegallery-box">
+            <div class="copy-component">
+                <div class="heading-text">
+                    <b class="heading">Vive la Música EDM</b>
+                    <div class="subheading">Sumérgete en el ritmo</div>
+                </div>
+                <div class="cta-button">
+                    <div class="text-container">
+                        <div class="cta2">Únete Ahora</div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="secondary-images-container">
+                    <img class="secondary-image-lummi" alt="" src="{{ url_for('static', filename='img/secondary-image--lummi@2x.png') }}" />
+
+                    <img class="secondary-image-lummi" alt="" src="{{ url_for('static', filename='img/secondary-image--lummi@2x.png') }}" />
+                </div>
+                <img class="main-image-lummi" alt="" src="{{ url_for('static', filename='img/secondary-image--lummi@2x.png') }}" />
+            </div>
+        </div>
+
+        <div class="typeshort-statement">
+            <div class="text-content">
+                <b class="benefit-heading">Nuestra Misión</b>
+                <div class="description">
+                    Conectar al mundo con la vibrante cultura EDM y su energía
+                    inigualable.
+                </div>
+            </div>
+        </div>
+        <div class="typebig-image">
+            <img class="benefits-image-lummi" alt="" src="{{ url_for('static', filename='img/benefits-image--lummi@2x.png') }}" />
+
+            <div class="benefits-copy-container">
+                <div class="copy-component2">
+                    <div class="heading-text1">
+                        <b class="heading1">Explora Beats Ilimitados</b>
+                        <div class="subheading1">Descubre artistas y listas</div>
+                    </div>
+                    <div class="cta-button1">
+                        <div class="text-container">
+                            <div class="cta2">Escucha Ahora</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="typebig-image1">
+            <div class="content">
+                <div class="heading-container">
+                    <b class="heading2">Galería de Artistas</b>
+                    <div class="list-description">Talento en la escena EDM</div>
+                </div>
+                <div class="showcase-item">
+                    <img class="image-lummi" alt="" src="{{ url_for('static', filename='img/image--lummi@2x.png') }}" />
+
+                    <div class="item-info">
+                        <div class="list-link-item">Nombre del Artista</div>
+                        <img class="arrowright-icon" alt="" src="{{ url_for('static', filename='img/arrowright.svg') }}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="typewith-newsletter">
+            <div class="content1">
+                <div class="list">
+                    <div class="list-heading">Compañía</div>
+                    <div class="list-link-item">Acerca de</div>
+                    <div class="list-link-item">Empleo</div>
+                    <div class="list-link-item">Prensa</div>
+                </div>
+                <div class="list">
+                    <div class="list-heading">Características</div>
+                    <div class="list-link-item">Alta Velocidad</div>
+                    <div class="list-link-item">Listas</div>
+                    <div class="list-link-item">Prensa</div>
+                </div>
+                <div class="list">
+                    <div class="list-heading">Social</div>
+                    <div class="list-link-item">Twitter</div>
+                    <div class="list-link-item">Instagram</div>
+                    <div class="list-link-item">Foros</div>
+                </div>
+                <div class="list3">
+                    <div class="label-and-description">
+                        <div class="list-heading3">Boletín Mensual</div>
+                        <div class="list-description">
+                            Recibe consejos para DJs y productores
+                        </div>
+                    </div>
+                    <div class="input-with-button">
+                        <div class="input1">
+                            <div class="input-form1">
+                                <div class="text-container3">
+                                    <div class="placeholder-text">tunombre@beatpulse.ai</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button3">
+                            <img class="icon" alt="" src="{{ url_for('static', filename='img/icon.svg') }}" />
+                        </div>
+                    </div>
+                    <div class="links">
+                        <div class="list-link-item9">Términos</div>
+                        <div class="list-link-item9">Privacidad</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var googleLoginContainer = document.getElementById("googleLoginContainer");
+        if (googleLoginContainer) {
+            googleLoginContainer.addEventListener("click", function () {
+                window.open("https://myaccount.google.com/");
+            });
+        }
+    </script>
+</body>
+
+</html>

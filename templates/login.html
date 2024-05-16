@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" />
+</head>
+
+<body>
+    <div class="musho-dark-themed-edm-music">
+        <div class="typesimple">
+            <div class="brand">
+                <img class="icon" alt="" src="./public/icon.svg" />
+
+                <div class="brandname">Xnermusic</div>
+            </div>
+            <div class="nav-links">
+                <div class="nav-link">
+                    <div class="nav-label">Inicio</div>
+                </div>
+                <div class="nav-link">
+                    <div class="nav-label">Sobre Nosotros</div>
+                </div>
+                <div class="nav-link">
+                    <div class="nav-label">Equipo</div>
+                </div>
+                <div class="button">
+                    <div class="text-container">
+                        <a class="nav-label">Entrar</a>
+
+                    </div>
+                </div>
+                <div class="button1">
+                    <div class="text-container">
+                        <div class="nav-label">Registro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="property-1boxed">
+            <div class="sign-up-container">
+                <b class="sign-up-heading">Crear Cuenta</b>
+                <div class="copy-component1">
+                  
+                    <form class="form" method="POST" action="/login">
+                    
+                            
+                         
+                        <input name="username" type="text" class=" input-form " placeholder="Nombre de Usuario">
+                        <input name="password" type="password" class=" input-form "  placeholder="password">
+                        <input type="submit" value="Iniciar Sesión"> 
+                    </form>
+                </div>
+                <div class="by-continuing-you">
+                    By continuing you agree to our Terms of Service and Privacy Policy
+                </div>
+            </div>
+        </div>
+       
+        <div class="typebig-image">
+            
+           
+        </div>
+        <div class="typebig-image1">
+
+        </div>
+        <div class="typewith-newsletter">
+            <div class="content1">
+                <div class="list">
+                    <div class="list-heading">Compañía</div>
+                    <div class="list-link-item">Acerca de</div>
+                    <div class="list-link-item">Empleo</div>
+                    <div class="list-link-item">Prensa</div>
+                </div>
+                <div class="list">
+                    <div class="list-heading">Características</div>
+                    <div class="list-link-item">Alta Velocidad</div>
+                    <div class="list-link-item">Listas</div>
+                    <div class="list-link-item">Prensa</div>
+                </div>
+                <div class="list">
+                    <div class="list-heading">Social</div>
+                    <div class="list-link-item">Twitter</div>
+                    <div class="list-link-item">Instagram</div>
+                    <div class="list-link-item">Foros</div>
+                </div>
+                <div class="list3">
+                    <div class="label-and-description">
+                        <div class="list-heading3">Boletín Mensual</div>
+                        <div class="list-description">
+                            Recibe consejos para DJs y productores
+                        </div>
+                    </div>
+                    <div class="input-with-button">
+                        <div class="input1">
+                            <div class="input-form1">
+                                <div class="text-container3">
+                                    <div class="placeholder-text">tunombre@beatpulse.ai</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button3">
+                            <img class="icon" alt="" src="{{ url_for('static', filename='img/icon.svg') }}" />
+                        </div>
+                    </div>
+                    <div class="links">
+                        <div class="list-link-item9">Términos</div>
+                        <div class="list-link-item9">Privacidad</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var googleLoginContainer = document.getElementById("googleLoginContainer");
+        if (googleLoginContainer) {
+            googleLoginContainer.addEventListener("click", function () {
+                window.open("https://myaccount.google.com/");
+            });
+        }
+    </script>
+</body>
+
+</html>
